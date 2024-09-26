@@ -12,7 +12,7 @@ function getComputerchoice(){
 };
 
 function getHumanChoice(){
-    answer = prompt(`choose rock paper or scissors: `)
+    answer = prompt(`choose rock paper or scissors: `).toLowerCase()
     if (answer == `scissors`){
         console.log(answer);
     }
@@ -27,8 +27,35 @@ function getHumanChoice(){
     }
 }
 
-console.log(`You chose:`);
-getHumanChoice()
 
-console.log(`Computer chose:`);
-getComputerchoice()
+let humanScore = 0
+let computerScore = 0
+
+function playRound(humanChoice, computerChoice){
+    var humanChoice = getHumanChoice()
+    var computerChoice = getComputerchoice()
+
+    if (humanChoice == `rock` && computerChoice == `rock`){
+        console.log(`It's a tie`);
+    }
+    else if (humanChoice == `rock` && computerChoice == `scissors`){
+        console.log (`You win! Rock crushes scissors!`);
+    }
+    else if (humanChoice == `rock` && computerChoice == `paper`){
+        console.log(`You LOSE! Paper covers rock`);
+    }
+    else if (humanChoice == `paper` && computerChoice == `rock`){
+        console.log(`You win! Paper covers rock`);
+    }
+    else if (humanChoice == `paper` && computerChoice == `scissors`){
+        console.log(`You lose! Scissors cuts paper`);
+    }
+    else if (humanChoice == `scissors` && computerChoice == `rock`){
+        console.log(`You Loooooseeee, rock crushes scissors`);
+    }
+    else if (humanChoice == `scissors` && computerChoice == `paper`){
+        console.log(`You win!! Scissors cuts up paper`)
+    }
+}
+
+playRound()

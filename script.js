@@ -21,43 +21,56 @@ function getHumanChoice(){
     }
 }
 
+function playGame(){
+    let humanScore = 0
+    let computerScore = 0
+    
+    function playRound(humanChoice, computerChoice){
+        if (humanChoice == `rock` && computerChoice == `rock`){
+            console.log(`It's a tie`);
+        }
+        else if (humanChoice == `rock` && computerChoice == `scissors`){
+            console.log (`You win! Rock crushes scissors!`);
+            humanScore++
+        }
+        else if (humanChoice == `rock` && computerChoice == `paper`){
+            console.log(`You LOSE! Paper covers rock`);
+            computerScore++
+        }
+        else if (humanChoice == `paper` && computerChoice == `rock`){
+            console.log(`You win! Paper covers rock`);
+            humanScore++
+        }
+        else if (humanChoice == `paper` && computerChoice == `scissors`){
+            console.log(`You lose! Scissors cuts paper`);
+            computerScore++
+        }
+        else if (humanChoice == `scissors` && computerChoice == `rock`){
+            console.log(`You Loooooseeee, rock crushes scissors`);
+            computerScore++
+        }
+        else if (humanChoice == `scissors` && computerChoice == `paper`){
+            console.log(`You win!! Scissors cuts up paper`)
+            humanScore++
+        }
+    }
+    
 
-let humanScore = 0
-let computerScore = 0
+    
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
 
-function playRound(humanChoice, computerChoice){
-    if (humanChoice == `rock` && computerChoice == `rock`){
-        console.log(`It's a tie`);
-    }
-    else if (humanChoice == `rock` && computerChoice == `scissors`){
-        console.log (`You win! Rock crushes scissors!`);
-        humanScore++
-    }
-    else if (humanChoice == `rock` && computerChoice == `paper`){
-        console.log(`You LOSE! Paper covers rock`);
-        computerScore++
-    }
-    else if (humanChoice == `paper` && computerChoice == `rock`){
-        console.log(`You win! Paper covers rock`);
-        humanScore++
-    }
-    else if (humanChoice == `paper` && computerChoice == `scissors`){
-        console.log(`You lose! Scissors cuts paper`);
-        computerScore++
-    }
-    else if (humanChoice == `scissors` && computerChoice == `rock`){
-        console.log(`You Loooooseeee, rock crushes scissors`);
-        computerScore++
-    }
-    else if (humanChoice == `scissors` && computerChoice == `paper`){
-        console.log(`You win!! Scissors cuts up paper`)
-        humanScore++
-    }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
-console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
+playGame();
 

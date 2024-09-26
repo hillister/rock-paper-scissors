@@ -1,29 +1,23 @@
 function getComputerchoice(){
     number = Math.floor((Math.random()) * 3) + 1
     if (number == 1){
-        console.log(`rock`);
+        return `rock`;
     }
     else if (number == 2){
-        console.log(`scissors`);
+        return `scissors`;
     }
     else if (number == 3) {
-        console.log(`paper`);
+        return `paper`;
     }
 };
 
 function getHumanChoice(){
     answer = prompt(`choose rock paper or scissors: `).toLowerCase()
-    if (answer == `scissors`){
-        console.log(answer);
-    }
-    else if (answer == `paper`){
-        console.log(answer);
-    }
-    else if (answer == `rock`){
-        console.log(answer);
+    if (answer == `scissors` || answer == `rock` || answer == `paper`){
+        return answer;
     }
     else {
-        console.log(`That is not an option`)
+        return `That is not an option`;
     }
 }
 
@@ -32,8 +26,8 @@ let humanScore = 0
 let computerScore = 0
 
 function playRound(humanChoice, computerChoice){
-    var humanChoice = getHumanChoice()
-    var computerChoice = getComputerchoice()
+    humanChoice = getHumanChoice()
+    computerChoice = getComputerchoice()
 
     if (humanChoice == `rock` && computerChoice == `rock`){
         console.log(`It's a tie`);

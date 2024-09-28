@@ -11,15 +11,6 @@ function getComputerChoice(){
     }
 };
 
-function getHumanChoice(){
-    answer = prompt(`choose rock paper or scissors: `).toLowerCase()
-    if (answer == `scissors` || answer == `rock` || answer == `paper`){
-        return answer;
-    }
-    else {
-        return `That is not an option`;
-    }
-}
 
 function playGame(){
     let humanScore = 0
@@ -63,13 +54,5 @@ function playGame(){
 }
 
 playGame();
-
-
-
-const rock = document.getElementById("rock");
-const paper = document.getElementById("paper");
-const scissors = document.getElementById("scissors");
-
-const btns = document.getElementsByTagName("button");
 
 

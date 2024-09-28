@@ -59,18 +59,17 @@ function playGame(){
     
     playRound(getHumanChoice(), getComputerChoice());
     console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`You: ${humanScore}`,`Computer: ${computerScore}`);
 
 }
 
 playGame();
+
+
+
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
+const btns = document.getElementsByTagName("button");
+
 

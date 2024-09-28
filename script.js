@@ -55,17 +55,46 @@ function playGame(){
     document.getElementById("rock").addEventListener("click", function(){
         playRound('rock', getComputerChoice());
         count.textContent = `You: ${humanScore} Computer: ${computerScore}`;
+        if (humanScore == 5){
+            score.textContent = "Game Over, You Win";
+            disableButtons()
+        }
+        else if (computerScore == 5){
+            score.textContent = "Games over, You LOSE"
+            disableButtons()
+        }
     })
     document.getElementById("paper").addEventListener("click", function(){
         playRound('paper', getComputerChoice());
         count.textContent = `You: ${humanScore} Computer: ${computerScore}`;
+        if (humanScore == 5){
+            score.textContent = "Game Over, You Win";
+            disableButtons()
+        }
+        else if (computerScore == 5){
+            score.textContent = "Games over, You LOSE";
+            disableButtons()
+        }
     })
     document.getElementById("scissors").addEventListener("click", function(){
         playRound('scissors', getComputerChoice());
         count.textContent = `You: ${humanScore} Computer: ${computerScore}`;
+        if (humanScore == 5){
+            score.textContent = "Game Over, You Win";
+            disableButtons()
+        }
+        else if (computerScore == 5){
+            score.textContent = "Games over, You LOSE"
+            disableButtons()
+        }
     })
 
-    
+    function disableButtons() {
+        let buttons = document.getElementsByClassName("btn"); 
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].setAttribute("disabled", true);
+        }
+    }
 }
 
 playGame();
